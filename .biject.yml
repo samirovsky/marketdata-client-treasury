@@ -1,0 +1,7 @@
+# How biject builds, tests and measures this repository.
+test: npm test
+coverage: { format: lcov, path: lcov.info }
+# What a biject migration may change here (check 7). CI workflows and this file never change.
+scope:
+  paths: ["src/**", "package.json", "package-lock.json"]
+  max_files: 10
