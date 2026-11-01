@@ -1,5 +1,5 @@
 // The net asset value of a multi-currency book, in one reporting currency.
-import { fxRate, latestQuote } from "./tickerline.ts";
+import { fxRate, latestQuote } from "./marketdata.ts";
 
 export interface Holding {
   symbol: string;

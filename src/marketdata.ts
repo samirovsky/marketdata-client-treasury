@@ -1,6 +1,6 @@
-// The Tickerline market data client: quotes and FX rates over REST.
+// The Market Data client: quotes and FX rates over REST.
 
-const BASE = "https://tickerline-api.fly.dev/v1";
+const BASE = "https://marketdata-api.vercel.app/v1";
 
 export interface Quote {
   symbol: string;
@@ -15,8 +15,8 @@ export interface FxRate {
 }
 
 async function get<T>(path: string): Promise<T> {
-  const res = await fetch(`${BASE}${path}`, { headers: { "X-Tickerline-Key": process.env.TICKERLINE_KEY ?? "demo" } });
-  if (!res.ok) throw new Error(`Tickerline ${path}: ${res.status}`);
+  const res = await fetch(`${BASE}${path}`, { headers: { "X-Marketdata-Key": process.env.MARKETDATA_KEY ?? "demo" } });
+  if (!res.ok) throw new Error(`Market Data ${path}: ${res.status}`);
   return (await res.json()) as T;
 }
 

@@ -2,7 +2,7 @@
   "name": "marketdata-client-treasury",
   "private": true,
   "type": "module",
-  "description": "Treasury reporting: the net asset value of a multi-currency book in EUR, on the Tickerline market data REST API.",
+  "description": "Treasury reporting: the net asset value of a multi-currency book in EUR, on the Market Data REST API.",
   "scripts": {
     "start": "node --experimental-strip-types src/main.ts",
     "test": "node --experimental-strip-types --test --experimental-test-coverage --test-reporter=lcov --test-reporter-destination=lcov.info --test-reporter=spec --test-reporter-destination=stdout src/*.test.ts"
